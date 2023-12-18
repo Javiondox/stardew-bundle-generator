@@ -1,0 +1,46 @@
+{
+	"title": "Bundles",
+	"bundles": [
+		{
+			"icon": "red",
+			"name": "Bundle 00",
+			"bg": "000",
+			"items": [
+				{
+					"icon": "example",
+					"name": "aaa",
+					"completed": false,
+					"url": "https://www.google.es"
+				},
+				{ "icon": "example", "name": "bbb", "completed": true, "url": "" }
+			]
+		},
+		{
+			"icon": "blue",
+			"name": "AAA",
+			"bg": "001",
+			"items": [
+				{ "icon": "example", "name": "aaa", "completed": false },
+				{ "icon": "example", "name": "bbb", "completed": true }
+			]
+		},
+		{
+			"icon": "green",
+			"name": "BBB",
+			"bg": "002",
+			"items": [
+				{ "icon": "example", "name": "aaa", "completed": true },
+				{ "icon": "example", "name": "bbb", "completed": true }
+			]
+		},
+		{
+			"icon": "yellow",
+			"name": "CCC",
+			"bg": "003",
+			"items": [
+				{ "icon": "example", "name": "aaa", "completed": true },
+				{ "icon": "example", "name": "bbb", "completed": true }
+			]
+		}
+	]
+}
