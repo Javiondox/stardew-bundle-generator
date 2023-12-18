@@ -23,7 +23,7 @@ export default function Home() {
 	}, []);
 
 	useLayoutEffect(() => {
-		setTooltip("");
+		setTooltip({ name: "" });
 	}, [status, setTooltip]);
 
 	return (
@@ -39,7 +39,7 @@ export default function Home() {
 						height: "720px",
 					}}
 				>
-					{status == 0 && (
+					{bundles && status == 0 && (
 						<>
 							<img
 								alt="bundle-selector"
@@ -97,7 +97,7 @@ export default function Home() {
 							</div>
 						</>
 					)}
-					{status == 1 && (
+					{bundles && status == 1 && (
 						<>
 							<img
 								alt="bundle-filler"
@@ -204,7 +204,7 @@ export default function Home() {
 					)}
 				</div>
 			</main>
-			{tooltip != "" && <Tooltip />}
+			{tooltip.name != "" && <Tooltip />}
 		</>
 	);
 }

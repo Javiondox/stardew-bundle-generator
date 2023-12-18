@@ -18,6 +18,11 @@
 
 body {
 	color: rgb(var(--foreground-rgb));
+	user-select: none;
+}
+
+.divider {
+	border: #b9642d solid 2px;
 }
 
 .slot {

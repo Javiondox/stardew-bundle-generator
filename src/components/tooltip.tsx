@@ -6,6 +6,7 @@ export default function Tooltip() {
 	const position = useMousePosition();
 
 	const { tooltip } = useContext(ToolTipContext);
+
 	return (
 		position.x > 0 && (
 			<div
@@ -18,9 +19,17 @@ export default function Tooltip() {
 					background: "#f1b768",
 					padding: "0.25em 0.5em",
 					border: "5px solid #bc6131",
+					display: "flex",
+					flexDirection: "column",
 				}}
 			>
-				{tooltip}
+				<p>{tooltip.name}</p>
+				{tooltip.desc && (
+					<>
+						<span className="divider" />
+						<p>{tooltip.desc}</p>
+					</>
+				)}
 			</div>
 		)
 	);

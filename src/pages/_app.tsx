@@ -3,13 +3,18 @@ import type { AppProps } from "next/app";
 import localFont from "@next/font/local";
 import { useState, createContext } from "react";
 
+type ToolTipObject = {
+	name: string;
+	desc?: string;
+};
+
 type ToolTipContextType = {
-	tooltip: string;
-	setTooltip: React.Dispatch<React.SetStateAction<string>>;
+	tooltip: ToolTipObject;
+	setTooltip: React.Dispatch<React.SetStateAction<ToolTipObject>>;
 };
 
 const ToolTipContextDefaultValues: ToolTipContextType = {
-	tooltip: "",
+	tooltip: { name: "", desc: "" },
 	setTooltip: () => {},
 };
 
@@ -27,7 +32,7 @@ const SVF = localFont({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-	const [tooltip, setTooltip] = useState<string>("");
+	const [tooltip, setTooltip] = useState<ToolTipObject>({ name: "", desc: "" });
 	return (
 		<ToolTipContext.Provider value={{ tooltip, setTooltip }}>
 			<main className={`${SVF.variable} font-sans`}>

@@ -28,9 +28,9 @@ function BundleIcon({ bundle, position, onClick }: BundleIconInterface) {
 
 	useEffect(() => {
 		if (showTooltip) {
-			setTooltip(bundle.name);
+			setTooltip({ name: bundle.name });
 		} else {
-			setTooltip("");
+			setTooltip({ name: "" });
 		}
 	}, [showTooltip]);
 

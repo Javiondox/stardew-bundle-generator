@@ -28,8 +28,13 @@ export default function ItemPlacer({ item, drawSlot }: Props) {
 	const { tooltip, setTooltip } = useContext(ToolTipContext);
 	return (
 		<div
-			onMouseEnter={() => setTooltip(item.name)}
-			onMouseLeave={() => setTooltip("")}
+			onMouseEnter={() =>
+				setTooltip({
+					name: item.name,
+					desc: item.desc ? item.desc : "",
+				})
+			}
+			onMouseLeave={() => setTooltip({ name: "" })}
 		>
 			{drawSlot ? (
 				item.completed ? (
